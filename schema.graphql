@@ -1,9 +1,22 @@
-type Query {
-    user(id: ID!): User!
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
 }
 
-type User {
-    id: ID!
-    username: String!
-    email: String!
+type Region {
+  regionId: Int!
+  regionDescription: String!
+}
+
+type Subscription {
+  onRegionCreated: Region!
+}
+
+type Query {
+  regions: [Region]
+}
+
+type Mutation {
+  createRegion(regionDescription: String!): Region
 }
