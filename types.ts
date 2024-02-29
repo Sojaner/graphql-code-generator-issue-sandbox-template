@@ -43,4 +43,4 @@ export type Subscription = {
 export type OnRegionCreatedSubscriptionVariables = Exact<{ [key: string]: never; }>;
 
 
-export type OnRegionCreatedSubscription = { __typename?: 'Subscription', onRegionCreated: { __typename?: 'Region', regionId: number, regionDescription: string } };
+export type OnRegionCreatedSubscription = { __typename?: 'Subscription', onRegionCreated: { __typename: 'Region', regionId: number, regionDescription: string } };
